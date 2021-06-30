@@ -14,7 +14,6 @@ import AddStory from "./components/profile/addstory";
 import Home from "./components/Home";
 import FoodTracker from "./components/profile/foodtracker";
 import Test from "./components/profile/test";
-=======
 import CreateStories from "./components/storie"
 
 

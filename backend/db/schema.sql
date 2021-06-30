@@ -30,6 +30,7 @@ CREATE TABLE doctors (
  doctor_id INT AUTO_INCREMENT NOT NULL,
  firstName VARCHAR(255) ,
  lastName Varchar(255),
+ age INT ,
  description TEXT,
  email VARCHAR(255) NOT NULL,
  Qualifications VARCHAR (255) ,
