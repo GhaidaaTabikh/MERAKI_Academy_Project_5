@@ -21,6 +21,7 @@ const newMessages = (req, res) => {
   const query = `SELECT * FROM conversation WHERE sender_id =? AND reciver_id=? `;
   const data = [user_id, receiverId];
   db.query(query, data, (err, result) => {
+    console.log("ressult",result);
     if (err) return res.status(400).send("SELECT is not done");
     const conversation_id = result[0].id;
     const query = `INSERT INTO messages (text,sender_id,conversation_id) VALUES (?,?,?) `;
@@ -43,6 +44,7 @@ const getConversation = (req, res) => {
 
   const data = [user_id, receiverId];
   db.query(query, data, (err, result) => {
+    console.log("result from baaaack",result);
     if (err) return res.status(400).send("SELECT is not done");
     res.status(200).json(result);
   });
